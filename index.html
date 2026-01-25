@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KenZer | Gamer Portfolio</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Subtle background noise layer -->
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- TOP NAV -->
+  <nav class="topbar">
+    <div class="brand">KenZer</div>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#anime">Animes</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#socials">Socials</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h1>KenZer – Competitive Gamer & Content Creator</h1>
+      <p>Mastering games, creating content, and leveling up every day.</p>
+      <a class="btn neon" href="#socials">CONNECT WITH ME</a>
+    </div>
+  </header>
+
+  <!-- GAMES -->
+  <section class="section" id="games">
+    <div class="section-head">
+      <h2>Games I Play</h2>
+      <p class="sub">Hover a tile to focus • Use arrows to swipe • Infinite loop</p>
+    </div>
+
+    <div class="coverflow" data-carousel="games">
+      <button class="cf-btn left" type="button" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="cf-viewport">
+        <div class="cf-track">
+          <article class="cf-card">
+            <img src="images/minecraft.png" alt="Minecraft">
+            <div class="cf-label"><span>Minecraft</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/valorant.png" alt="Valorant">
+            <div class="cf-label"><span>Valorant</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/oncehuman.png" alt="Once Human">
+            <div class="cf-label"><span>Once Human</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/amongus.png" alt="Among Us">
+            <div class="cf-label"><span>Among Us</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/pixark.png" alt="Pixark">
+            <div class="cf-label"><span>Pixark</span></div>
+          </article>
+        </div>
+      </div>
+
+      <button class="cf-btn right" type="button" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="cf-dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ANIME -->
+  <section class="section" id="anime">
+    <div class="section-head">
+      <h2>Animes I Have Watched 🍿</h2>
+      <p class="sub">Clean neon carousel style</p>
+    </div>
+
+    <div class="coverflow" data-carousel="anime">
+      <button class="cf-btn left" type="button" aria-label="Previous">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="cf-viewport">
+        <div class="cf-track">
+          <article class="cf-card">
+            <img src="images/yourname.jpg" alt="Your Name">
+            <div class="cf-label"><span>Your Name</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/weathering.jpg" alt="Weathering With You">
+            <div class="cf-label"><span>Weathering With You</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/sololeveling.jpg" alt="Solo Leveling">
+            <div class="cf-label"><span>Solo Leveling</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/suzume.jpg" alt="Suzume">
+            <div class="cf-label"><span>Suzume</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/ninja-kamui.jpg" alt="Ninja Kamui">
+            <div class="cf-label"><span>Ninja Kamui</span></div>
+          </article>
+        </div>
+      </div>
+
+      <button class="cf-btn right" type="button" aria-label="Next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="cf-dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT (HIGHLIGHTED) -->
+  <section class="section about-highlight" id="about">
+    <div class="section-head center">
+      <h2>About Me</h2>
+      <p class="sub">Clean profile card (highlighted)</p>
+    </div>
+
+    <div class="about-card highlight-card">
+      <div class="about-top">
+        <div class="about-avatar">
+          <i class="fa-solid fa-user-ninja"></i>
+        </div>
+        <div class="about-title">
+          <h3>KenZer</h3>
+          <p class="role">Competitive Gamer • Content Creator • Anime Fan</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-pill"><span>Age</span><strong>17</strong></div>
+        <div class="about-pill"><span>Country</span><strong>Sri Lanka</strong></div>
+        <div class="about-pill"><span>Favorite Game</span><strong>Valorant</strong></div>
+        <div class="about-pill"><span>Hobbies</span><strong>Gaming, Anime, Coding</strong></div>
+      </div>
+
+      <p class="about-bio">
+        I’m passionate about competitive gaming and content creation. Whether I’m grinding ranks or exploring new worlds,
+        I’m always leveling up.
+      </p>
+    </div>
+  </section>
+
+  <!-- SOCIALS -->
+  <section class="section" id="socials">
+    <div class="section-head">
+      <h2>Connect With Me</h2>
+      <p class="sub">Replace # with your real links</p>
+    </div>
+
+    <div class="social-grid">
+      <a class="social" href="#" target="_blank" rel="noreferrer"><i class="fa-brands fa-discord"></i>Discord</a>
+      <a class="social" href="https://www.instagram.com/itzh4zz/" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i>Instagram</a>
+      <a class="social" href="https://www.tiktok.com/@h4sindu" target="_blank" rel="noreferrer"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+      <a class="social" href="https://www.youtube.com/@kenzer999" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube"></i>YouTube</a>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="cursor.js"></script>
+  <script src="carousel.js"></script>
+</body>
+</html>
