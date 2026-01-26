@@ -53,7 +53,7 @@
   <!-- GAMES -->
   <section class="section" id="games">
     <div class="section-head">
-      <h2>Games I Play</h2>
+      <h2>Games I Have Played</h2>
     </div>
 
     <div class="coverflow" data-carousel="games">
@@ -81,6 +81,11 @@
           <article class="cf-card">
             <img src="images/amongus.webp" alt="Among Us">
             <div class="cf-label"><span>Among Us</span></div>
+          </article>
+
+          <article class="cf-card">
+            <img src="images/Brawlhalla.webp" alt="Brawlhalla">
+            <div class="cf-label"><span>Brawlhalla</span></div>
           </article>
 
           <article class="cf-card">
@@ -176,6 +181,42 @@
       </p>
     </div>
   </section>
+
+  <section class="section" id="discord">
+  <div class="section-head">
+    <h2>Discord Activity</h2>
+  </div>
+
+  <div class="dcard">
+    <div class="dcard-left">
+      <img class="d-avatar" id="dAvatar" src="images/amongus.png" alt="Discord Avatar">
+      <span class="d-status" id="dStatus" title="status"></span>
+    </div>
+
+    <div class="dcard-mid">
+      <div class="d-top">
+        <div class="d-name" id="dName">Loading...</div>
+        <div class="d-tag" id="dTag">@discord</div>
+      </div>
+
+      <div class="d-activity">
+        <div class="d-activity-title" id="dActivityTitle">Fetching activity…</div>
+        <div class="d-activity-sub" id="dActivitySub">Please wait</div>
+      </div>
+    </div>
+
+    <div class="dcard-right">
+      <div class="d-mini">
+        <i class="fa-brands fa-discord"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  window.DISCORD_USER_ID = "1269887035930574948";
+</script>
+<script src="discord.js"></script>
 
   <!-- SOCIALS -->
   <section class="section" id="socials">
