@@ -29,7 +29,11 @@ body{
   position:relative;
 }
 
-/* clean animated glow bg */
+/* =========================
+   CLEAN BACKGROUND (NOT EMPTY)
+========================= */
+
+/* animated glow */
 body::before{
   content:"";
   position:fixed;
@@ -249,6 +253,7 @@ body::after{
   height:100%;
 }
 
+/* ✅ SLOWER + SMOOTHER HERE */
 .cf-card{
   position:absolute;
   top:50%;
@@ -261,11 +266,11 @@ body::after{
   border:1px solid rgba(255,255,255,.12);
   overflow:hidden;
   transition:
-    transform .38s ease,
-    opacity .28s ease,
-    filter .28s ease,
-    box-shadow .28s ease,
-    border-color .28s ease;
+    transform .85s cubic-bezier(.22,.8,.25,1),
+    opacity .65s ease,
+    filter .65s ease,
+    box-shadow .65s ease,
+    border-color .65s ease;
   opacity:0;
   pointer-events:none;
 }
@@ -387,7 +392,7 @@ body::after{
   overflow:hidden;
 }
 
-/* animated border sweep (clean) */
+/* animated border sweep */
 .highlight-card::before{
   content:"";
   position:absolute;
@@ -395,7 +400,6 @@ body::after{
   border-radius:22px;
   background: linear-gradient(120deg, transparent, rgba(255,30,60,.45), transparent);
   opacity:.55;
-  filter: blur(0px);
   transform: translateX(-40%);
   animation: sweep 5.6s linear infinite;
   pointer-events:none;
@@ -520,4 +524,113 @@ body::after{
   .cf-card{ height:230px; }
   .cf-card.is-left{ transform: translate(-125%, -50%) scale(.86); }
   .cf-card.is-right{ transform: translate(25%, -50%) scale(.86); }
+}
+/* ===== Discord Activity Card ===== */
+.dcard{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 18px;
+  border-radius: 22px;
+  background: rgba(12,14,20,.62);
+  border: 1px solid rgba(255,30,60,.26);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 55px rgba(255,30,60,.14);
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.dcard-left{
+  position:relative;
+  width:68px;
+  height:68px;
+  flex:0 0 auto;
+}
+
+.d-avatar{
+  width:68px;
+  height:68px;
+  border-radius:18px;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow: 0 0 18px rgba(255,30,60,.12);
+}
+
+.d-status{
+  position:absolute;
+  right:-2px;
+  bottom:-2px;
+  width:16px;
+  height:16px;
+  border-radius:999px;
+  border:2px solid rgba(12,14,20,.9);
+  background: #6b7280; /* default */
+  box-shadow: 0 0 14px rgba(255,30,60,.10);
+}
+
+.dcard-mid{
+  flex:1;
+  min-width:0;
+}
+
+.d-top{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+  margin-bottom:6px;
+}
+
+.d-name{
+  font-weight:800;
+  letter-spacing:.2px;
+  font-size:1.15rem;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.d-tag{
+  opacity:.7;
+  font-weight:600;
+  font-size:.9rem;
+  white-space:nowrap;
+}
+
+.d-activity-title{
+  font-weight:700;
+  opacity:.92;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.d-activity-sub{
+  margin-top:2px;
+  opacity:.72;
+  font-size:.95rem;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.dcard-right{
+  flex:0 0 auto;
+}
+
+.d-mini{
+  width:54px;
+  height:54px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background: rgba(255,30,60,.10);
+  border: 1px solid rgba(255,30,60,.26);
+  box-shadow: 0 0 22px rgba(255,30,60,.12);
+  font-size:22px;
+  color: rgba(255,30,60,.95);
+}
+
+@media (max-width: 520px){
+  .dcard{ gap:12px; padding:16px; }
+  .d-mini{ display:none; } /* cleaner on small phones */
 }
