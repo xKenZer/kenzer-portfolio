@@ -45,12 +45,21 @@ function initCoverflow(root){
   btnR.addEventListener("click", next);
 
   // hover to focus
-  cards.forEach((card, i) => {
-    card.addEventListener("mouseenter", () => {
+let hoverTimeout = null;
+
+cards.forEach((card, i) => {
+  card.addEventListener("mouseenter", () => {
+    hoverTimeout = setTimeout(() => {
       current = i;
       render();
-    });
+    }, 220); // delay before swipe (milliseconds)
   });
+
+  card.addEventListener("mouseleave", () => {
+    clearTimeout(hoverTimeout);
+  });
+});
+
 
   render();
 }
