@@ -1,6 +1,7 @@
 # 🎮 KenZer – Gamer Portfolio
 
 Welcome to my personal gamer portfolio website.
+https://kenzer.netlify.app/
 
 This website showcases:
 
